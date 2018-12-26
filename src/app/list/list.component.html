@@ -1,0 +1,30 @@
+<div class="list-items">
+  <div class="container-fluid" *ngIf="restaurantData">
+    <div class="row">
+      <div class="card-columns">
+        <div *ngFor="let data of restaurantData">
+          <div class="card" *ngFor="let item of validateData(data.menu.items)">
+            <img class="card-img-top" src="{{data.imgUrl}}" alt="{{data.imgUrl}}">
+            <div class="card-footer">
+              <div class="text-muted">
+                <i class="fa fa-circle" [ngClass]="isAvailableInStock(item.inStock)"></i>
+                <span class="item-name"> {{item.name}}</span>
+                <div class="sub-name">
+                  <span> {{data.name}}</span>
+                </div>
+              </div>
+              <div class="footer-rating-container">
+                <div class="rating" [ngClass]="getRattingsColor(data.avgRating)">
+                  <i class="fa fa-star"></i> {{data.avgRating}}
+                </div>
+                <div class="priceTag">
+                  <span>Rs {{item.price}}/- FOR 2</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

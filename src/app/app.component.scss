@@ -1,0 +1,72 @@
+.redDot {
+  color: red;
+}
+
+.greenDot {
+  color: green;
+}
+
+.greenLabel {
+  padding: 0px 10px 0px 10px;
+  color: #fff;
+  background-color: green;
+}
+
+.orangeLabel {
+  padding: 0px 10px 0px 10px;
+  color: #fff;
+  background-color: orange;
+}
+
+.card {
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filterbtn {
+  color: #FBC04C;
+}
+
+.footer-rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.sub-name {
+  padding-bottom: 10px;
+  span {
+    font-size: 12px;
+    margin-left: 20px;
+  }
+}
+
+.card-columns .card {
+  margin-bottom: 1.75rem;
+}
+
+/* Responsive Media Query */
+@media (min-width: 576px) and (max-width: 768px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .greenLabel, .orangeLabel {
+    padding: 0px 5px 0px 5px;
+  }
+  .item-name, .priceTag {
+    font-size: 14px;
+  }
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+  }
+}
